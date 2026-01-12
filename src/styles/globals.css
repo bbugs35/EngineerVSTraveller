@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=League+Gothic&family=Caveat:wght@400;600&family=Oswald:wght@200;300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:          #f4f6f8;
+  --surface:     #ffffff;
+  --surface-alt: #eaeef1;
+  --ink:         #102a36;
+  --ink-soft:    #54656f;
+  --ink-faint:   #8b9aa2;
+  --line:        #dbe2e6;
+  --teal:        #0e8c84;
+  --teal-deep:   #0a6e67;
+  --teal-tint:   #e3f3f1;
+  --amber:       #df9d3a;
+  --amber-tint:  #fbecd4;
+  --navy:        #0f2937;
+  --code-bg:     #1e293b;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  background: var(--bg);
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+@keyframes pulseSegment {
+  0%, 100% { box-shadow: none; }
+  50%       { box-shadow: inset 0 0 16px rgba(255,255,255,0.28); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Cinematic color grade — applied uniformly across every travel photo and
+   video so a mix of placeholder (or eventually real) images reads as one
+   consistent, intentional look rather than a random photo dump. */
+.grade {
+  filter: saturate(1.1) contrast(1.08) brightness(0.97) sepia(0.06);
+}
+
+/* Road-journey terrain particle effects */
+@keyframes snowFall {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  10%  { opacity: 0.9; }
+  100% { transform: translateY(110vh) translateX(24px); opacity: 0.2; }
+}
+
+@keyframes leafFall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 0.9; }
+  50%  { transform: translateY(55vh) translateX(30px) rotate(160deg); }
+  100% { transform: translateY(110vh) translateX(-10px) rotate(340deg); opacity: 0.3; }
+}
+
+@keyframes duststreak {
+  0%   { transform: translateX(-10vw); opacity: 0; }
+  15%  { opacity: 0.7; }
+  85%  { opacity: 0.5; }
+  100% { transform: translateX(10vw); opacity: 0; }
+}
+
+@keyframes foamSparkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50%      { opacity: 0.9; transform: scale(1.2); }
+}
