@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ModeSwitcher } from "./components/layout/ModeSwitcher";
+import { ModeSwitcher } from "./shared/components/ModeSwitcher";
 import { EngineerExperience } from "./engineer/EngineerExperience";
-import { TravelExperience } from "./travel/TravelExperience";
-import "./styles/globals.css";
+import { TravelExperience } from "./traveller/TravelExperience";
+import "./shared/styles/globals.css";
 
 export default function App() {
   const [mode, setMode] = useState("engineer"); // "engineer" | "traveller"

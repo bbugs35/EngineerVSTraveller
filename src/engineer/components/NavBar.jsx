@@ -1,4 +1,4 @@
-import { NAV_ITEMS } from "../../data/resumeData";
+import { NAV_ITEMS } from "../data/resumeData";
 
 export function NavBar({ active, onNav }) {
   return (
